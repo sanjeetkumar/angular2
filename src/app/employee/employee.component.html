@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Striped Rows</h2>
+    <p>The .table-striped class adds zebra-stripes to a table:</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Sr.no</th>
+          <th>EmployeeId</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Salary</th>
+          <th>Dob</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employee;let i = index;">
+          <td>{{i+1}}</td>
+          <td>{{emp.empId}}</td>
+          <td>{{emp.empname | uppercase}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.salary | currency:USD:true:'4.4-4'}}</td>
+          <td>{{emp.dateofbirth | date:'fullDate'}}</td>
+          <td>{{firstrow}}</td>
+          <td>{{lastrow}}</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  
